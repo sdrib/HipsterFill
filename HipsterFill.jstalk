@@ -1,19 +1,29 @@
-/*---{ HipsterFill }---*/
+// Fill Text (ctrl t)
 /*
-* Dummy text filler plugin for Sketch!
-* NOTE: Currently only works with Sketch Beta (2.1.2)
-*
-* @version - 0.5
-* @author  - @sdriblive
-* @todo    - shortcut
-*          - user input
-*          - see if selected layer is a text layer
-*          - an output when no internet connection is available
-*          - fix the resize issue
-*
-* Thanks to: -@bohemiancoding for the awesome Sketch and the help! 
-*            -@boogah for hipsteripsum!
-*
+
+# HipsterFill
+Dummy text filler plugin for Sketch!
+
+@version: *0.6*
+@author: @sdriblive
+
+@todo:    
+* user input, ask for the numbers of paragraphs
+* see if selected layer is a text layer
+* an output when there is no internet connection is available
+* fix the resize issue, refresh?
+
+## How to use ?
+
+NOTE: Currently only works with Sketch Beta (2.1.2)
+Place the *HipsterFill.jstalk* in *~/library/application support/sketch/plugins*.
+
+Use ctrl + t or the plugins menu to add filler text to a selected textbox.
+
+## Many thanks to: 
+* [@bohemiancoding](https://twitter.com/bohemiancoding) for the awesome Sketch and the help!
+* [@boogah](https://twitter.com/boogah) for hipsteripsum!
+
 */
 
 // default params
@@ -31,9 +41,9 @@ var theResponse = null;
 var theResponseData = [NSURLConnection sendSynchronousRequest:theRequest returningResponse:nil error:nil];
 // convert data to text 
 theText = [[NSString alloc] initWithData:theResponseData encoding:NSUTF8StringEncoding]; 
-// parse
+// parse txt
 var parsed = JSON.parse(theText);
 var hip = parsed.text;
-//the selected layer
+//apply to the selected layer
 var layer = selection[0];
-[layer setStringValue: hip];//apply the txt
+[layer setStringValue: hip];
