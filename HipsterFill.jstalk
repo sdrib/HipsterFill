@@ -1,0 +1,39 @@
+/*---{ HipsterFill }---*/
+/*
+* Dummy text filler plugin for Sketch!
+* NOTE: Currently only works with Sketch Beta (2.1.2)
+*
+* @version - 0.5
+* @author  - @sdriblive
+* @todo    - shortcut
+*          - user input
+*          - see if selected layer is a text layer
+*          - an output when no internet connection is available
+*          - fix the resize issue
+*
+* Thanks to: -@bohemiancoding for the awesome Sketch and the help! 
+*            -@boogah for hipsteripsum!
+*
+*/
+
+// default params
+var p_paras = "1";// @todo - user input
+var p_type = "hipster-centric";
+var p_html = "false";
+// define the url
+var theAddress = "http://hipsterjesus.com/api/?paras=" + p_paras + "&type=" + p_type + "&html=" + p_html; 
+var theUrl = NSURL.URLWithString_(theAddress);
+// define the request 
+var theRequest = NSMutableURLRequest.requestWithURL_cachePolicy_timeoutInterval(theUrl, NSURLRequestReloadIgnoringLocalCacheData, 60);
+theRequest.setHTTPMethod_("GET");
+// get response data
+var theResponse = null;
+var theResponseData = [NSURLConnection sendSynchronousRequest:theRequest returningResponse:nil error:nil];
+// convert data to text 
+theText = [[NSString alloc] initWithData:theResponseData encoding:NSUTF8StringEncoding]; 
+// parse
+var parsed = JSON.parse(theText);
+var hip = parsed.text;
+//the selected layer
+var layer = selection[0];
+[layer setStringValue: hip];//apply the txt
