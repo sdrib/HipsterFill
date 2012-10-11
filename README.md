@@ -6,12 +6,12 @@ Dummy text filler plugin for Sketch!
 NOTE: Currently only works with Sketch Beta (2.1.2)
 
 todo:    
-* shortcut
-* user input
+* shortcut support
+* user input, ask for the numbers of paragraphs
 * see if selected layer is a text layer
-* an output when no internet connection is available
-* fix the resize issue
+* an output when there is no internet connection is available
+* fix the resize issue, refresh?
 
-### Thanks to: 
-* @bohemiancoding for the awesome Sketch and the help! 
+### Many thanks to: 
+* [@bohemiancoding](https://twitter.com/bohemiancoding) for the awesome Sketch and the help!
 * @boogah for hipsteripsum!
