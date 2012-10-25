@@ -1,5 +1,5 @@
 # HipsterFill
-Dummy text filler plugin for Sketch!
+Dummy text filler plugin for [Sketch](http://www.bohemiancoding.com/sketch/)!
 
 @version: *0.7*
 
