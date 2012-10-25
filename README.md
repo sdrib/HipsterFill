@@ -1,20 +1,21 @@
 # HipsterFill
 Dummy text filler plugin for Sketch!
 
-@version: *0.6*
+@version: *0.7*
 
 @todo:    
 * user input, ask for the numbers of paragraphs
 * see if selected layer is a text layer
-* an output when there is no internet connection is available
-* fix the resize issue, refresh?
+* fix the resize issue (refresh?)
 
 ## How to use ?
 
-NOTE: Currently only works with Sketch Beta (2.1.2)
 Place the *HipsterFill.jstalk* in *~/library/application support/sketch/plugins*.
 
-Use ctrl + t or the plugins menu to add filler text to a selected textbox.
+Use **ctrl + t** or the plugins menu and select *HipsterFill* to add filler text to a selected textbox.
+When there is no internet connection available, a standard filler text will be provided.
+
+NOTE: you need Sketch 2.1.2
 
 ## Many thanks to: 
 * [@bohemiancoding](https://twitter.com/bohemiancoding) for the awesome Sketch and the help!

@@ -4,21 +4,22 @@
 # HipsterFill
 Dummy text filler plugin for Sketch!
 
-@version: *0.6*
+@version: *0.7*
 @author: @sdriblive
 
 @todo:    
 * user input, ask for the numbers of paragraphs
 * see if selected layer is a text layer
-* an output when there is no internet connection is available
-* fix the resize issue, refresh?
+* fix the resize issue (refresh?)
 
 ## How to use ?
 
-NOTE: Currently only works with Sketch Beta (2.1.2)
 Place the *HipsterFill.jstalk* in *~/library/application support/sketch/plugins*.
 
-Use ctrl + t or the plugins menu to add filler text to a selected textbox.
+Use **ctrl + t** or the plugins menu and select *HipsterFill* to add filler text to a selected textbox.
+When there is no internet connection available, a standard filler text will be provided.
+
+NOTE: you need Sketch 2.1.2
 
 ## Many thanks to: 
 * [@bohemiancoding](https://twitter.com/bohemiancoding) for the awesome Sketch and the help!
@@ -39,11 +40,17 @@ theRequest.setHTTPMethod_("GET");
 // get response data
 var theResponse = null;
 var theResponseData = [NSURLConnection sendSynchronousRequest:theRequest returningResponse:nil error:nil];
+
+if(theResponseData!=nil){//response/online or not?
 // convert data to text 
 theText = [[NSString alloc] initWithData:theResponseData encoding:NSUTF8StringEncoding]; 
 // parse txt
 var parsed = JSON.parse(theText);
 var hip = parsed.text;
+} else {
+    var hip ="Offline Shoreditch authentic mustache, cardigan forage biodiesel bespoke iphone no internet connection.  Pickled helvetica, check your WIFI hoodie bicycle rights artisan fingerstache squid, selvage salvia.  Put a bird on it street art lomo vegan, bespoke truffaut salvia yr shoreditch post-ironic fingerstache 8-bit cosby sweater.  Readymade lomo brooklyn etsy, sartorial four loko ennui.  Fixie retro cosby sweater high life leggings keffiyeh 3 wolf moon farm-to-table, pop-up locavore beard semiotics chambray +1 sustainable.  Letterpress fanny pack leggings, pickled cred butcher gastropub irony cliche +1 put a bird on it retro forage wes anderson.  Small batch four loko retro, mlkshk 3 wolf moon put a bird on it gentrify mixtape pickled occupy wes anderson narwhal before they sold out.";
+}
+
 //apply to the selected layer
 var layer = selection[0];
 [layer setStringValue: hip];
