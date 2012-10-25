@@ -19,4 +19,4 @@ NOTE: you need Sketch 2.1.2
 
 ## Many thanks to: 
 * [@bohemiancoding](https://twitter.com/bohemiancoding) for the awesome Sketch and the help!
-* [@boogah](https://twitter.com/boogah) for hipsteripsum!
+* [@boogah](https://twitter.com/boogah) for hipsteripsum and it's api!
