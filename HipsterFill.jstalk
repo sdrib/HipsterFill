@@ -28,7 +28,7 @@ NOTE: you need Sketch 2.1.2
 */
 
 // default params
-var p_paras = "1";// @todo - user input
+var p_paras = [[doc askForUserInput:"How many paragraphs?" ofType:1 initialValue:1] integerValue];
 var p_type = "hipster-centric";
 var p_html = "false";
 // define the url
