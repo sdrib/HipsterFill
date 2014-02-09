@@ -12,7 +12,7 @@ Dummy text filler plugin for Sketch!
 
 ## How to use ?
 
-Place the *HipsterFill.jstalk* in *~/library/application support/sketch/plugins*.
+Double click *HipsterFill.sketchplugin* to have Sketch install it in the right place.
 
 Use **ctrl + t** or the plugins menu and select *HipsterFill* to add filler text to a selected textbox.
 When there is no internet connection available, a standard filler text will be provided.
